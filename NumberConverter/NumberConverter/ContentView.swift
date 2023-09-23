@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var numbers = Numbers.createNumbersDictionary()
+    @State private var numberString = ""
+    @State var result: String = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("")
+            Text(result)
+            TextField("Введите Ваше число прописью", text: $numberString)
+                .textFieldStyle(.roundedBorder)
+            
+            Button("convert") {
+                result = NumberConverter.checkConditions(numberString: numberString)
+            }
+            .buttonStyle(.bordered)
+            .tint(.purple)
         }
         .padding()
     }
@@ -21,6 +30,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(result: "")
     }
 }

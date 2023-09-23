@@ -120,6 +120,22 @@ if splitString[splitString.count - 1].numberType == .and {
 func checkConditions(splitString: [String]) -> String {
     let typeString = splitString.map { $0.numberType }
     
+    if typeString.count > 1 && typeString.contains(where: { $0 == NumberType.zero }) {
+        return "ошибочка 0"
+    }
+
+    if typeString.contains(where: { $0 == NumberType.error }) {
+        return "лишнее слово/цифра"
+    }
+
+    if typeString.count == 1 && typeString[0] != .hundred && typeString[0] != .and {
+        return  "конверт числа"
+    }
+
+    if typeString[typeString.count - 1] == .and {
+        return "and последний надо единицу"
+    }
+    
     for i in 0...typeString.count - 2 {
         switch typeString[i] {
             case .units:
@@ -146,10 +162,12 @@ func checkConditions(splitString: [String]) -> String {
                 return "error"
         }
     }
-    return "true"
+    
+    let result = String(convert(splitString: splitString))
+    return result
 }
 
-print(checkConditions(splitString: ["one", "hundred", "and"]))
+print(checkConditions(splitString: ["five", "hundred", "dd", "two"]))
 //if typeString.count == 1 {
 //    if typeString[0] == .units || typeString[0] == .tens || typeString[0] == .roundTens || typeString[0] == .zero {
 //

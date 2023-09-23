@@ -14,6 +14,7 @@
 		EED6CABB2ABBB49500C1B421 /* NumberStringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */; };
 		EED6CABD2ABBB4B900C1B421 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABC2ABBB4B900C1B421 /* Extensions .swift */; };
 		EED6CABF2ABBB4DE00C1B421 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */; };
+		EEF452912ABF12A700F76BE1 /* NumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF452902ABF12A700F76BE1 /* NumberConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberStringType.swift; sourceTree = "<group>"; };
 		EED6CABC2ABBB4B900C1B421 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		EEF452902ABF12A700F76BE1 /* NumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,7 @@
 			children = (
 				EED6CAAB2ABBB40E00C1B421 /* NumberConverterApp.swift */,
 				EED6CAAD2ABBB40E00C1B421 /* ContentView.swift */,
-				EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */,
-				EED6CABC2ABBB4B900C1B421 /* Extensions .swift */,
-				EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */,
+				EEF452922ABF130E00F76BE1 /* Number Converter */,
 				EED6CAAF2ABBB41000C1B421 /* Assets.xcassets */,
 				EED6CAB12ABBB41000C1B421 /* NumberConverter.entitlements */,
 				EED6CAB22ABBB41000C1B421 /* Preview Content */,
@@ -76,6 +76,17 @@
 				EED6CAB32ABBB41000C1B421 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EEF452922ABF130E00F76BE1 /* Number Converter */ = {
+			isa = PBXGroup;
+			children = (
+				EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */,
+				EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */,
+				EEF452902ABF12A700F76BE1 /* NumberConverter.swift */,
+				EED6CABC2ABBB4B900C1B421 /* Extensions .swift */,
+			);
+			path = "Number Converter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 				EED6CABF2ABBB4DE00C1B421 /* Numbers.swift in Sources */,
 				EED6CAAC2ABBB40E00C1B421 /* NumberConverterApp.swift in Sources */,
 				EED6CABB2ABBB49500C1B421 /* NumberStringType.swift in Sources */,
+				EEF452912ABF12A700F76BE1 /* NumberConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

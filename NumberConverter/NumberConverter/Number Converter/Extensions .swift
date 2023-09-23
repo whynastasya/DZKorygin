@@ -19,9 +19,9 @@ extension Int {
 extension String {
     var numberType: NumberStringType {
         let zero = 0.string
-        let units = [1, 2, 3, 4, 5, 6, 7, 8, 9].map { $0.string }
-        let tens = [11, 12, 13, 14, 15, 16, 17, 18, 19].map { $0.string }
-        let roundTens = [10, 20, 30, 40, 50, 60, 70, 80, 90].map { $0.string }
+        let units = (1...9).map { $0.string }
+        let tens = (11...19).map { $0.string }
+        let roundTens = (1...9).map { $0 * 10 }.map { $0.string }
         let hundred = "hundred"
         let and = "and"
         if units.contains(where: { $0 == self }) {
