@@ -8,21 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var numbers = Numbers.createNumbersDictionary()
     @State private var numberString = ""
-    @State var result: String = ""
+    @State var result = Result(result: "Здесь будет результат😋", type: .default)
     
     var body: some View {
         VStack {
-            Text(result)
+            Text(result.result)
+                .font(.title2)
+                .padding()
+                .background(
+                    result.type.color.opacity(0.8),
+                    in: Capsule())
+                .foregroundColor(.white)
+                .animation(.spring(), value: result.type)
+            
             TextField("Введите Ваше число прописью", text: $numberString)
                 .textFieldStyle(.roundedBorder)
             
-            Button("convert") {
-                result = NumberConverter.checkConditions(numberString: numberString)
+            Button {
+                withAnimation {
+                    result = NumberConverter.checkConditions(numberString: numberString)
+                }
+            } label: {
+                HStack {
+                    Image(systemName: "123.rectangle")
+                    Text("Конвертнуть")
+                }
             }
-            .buttonStyle(.bordered)
-            .tint(.purple)
+            .buttonStyle(.borderedProminent)
+            .tint(.purple.opacity(0.1))
         }
         .padding()
     }
@@ -30,6 +44,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(result: "")
+        ContentView()
     }
 }

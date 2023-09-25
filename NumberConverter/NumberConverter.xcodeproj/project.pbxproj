@@ -15,6 +15,7 @@
 		EED6CABD2ABBB4B900C1B421 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABC2ABBB4B900C1B421 /* Extensions .swift */; };
 		EED6CABF2ABBB4DE00C1B421 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */; };
 		EEF452912ABF12A700F76BE1 /* NumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF452902ABF12A700F76BE1 /* NumberConverter.swift */; };
+		EEF452942AC09FF400F76BE1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF452932AC09FF400F76BE1 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EED6CABC2ABBB4B900C1B421 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		EEF452902ABF12A700F76BE1 /* NumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverter.swift; sourceTree = "<group>"; };
+		EEF452932AC09FF400F76BE1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */,
 				EEF452902ABF12A700F76BE1 /* NumberConverter.swift */,
 				EED6CABC2ABBB4B900C1B421 /* Extensions .swift */,
+				EEF452932AC09FF400F76BE1 /* Result.swift */,
 			);
 			path = "Number Converter";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				EED6CAAE2ABBB40E00C1B421 /* ContentView.swift in Sources */,
 				EED6CABF2ABBB4DE00C1B421 /* Numbers.swift in Sources */,
 				EED6CAAC2ABBB40E00C1B421 /* NumberConverterApp.swift in Sources */,
+				EEF452942AC09FF400F76BE1 /* Result.swift in Sources */,
 				EED6CABB2ABBB49500C1B421 /* NumberStringType.swift in Sources */,
 				EEF452912ABF12A700F76BE1 /* NumberConverter.swift in Sources */,
 			);

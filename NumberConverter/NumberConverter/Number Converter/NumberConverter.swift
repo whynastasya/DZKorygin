@@ -16,7 +16,7 @@ final class NumberConverter {
     static func convert(splitString: [String]) -> Int {
         var result = 0
 
-        if splitString.count > 2 || splitString.contains(where: {$0 == "hundred" }) {
+        if splitString.count > 2 || splitString.contains(where: { $0 == "hundred" }) {
             result = numbers[splitString[0]]! * numbers[splitString[1]]!
             for i in 2..<splitString.count {
                 result += numbers[splitString[i]]!
@@ -30,57 +30,56 @@ final class NumberConverter {
         return result
     }
     
-    static func checkConditions(numberString: String) -> String {
+    static func checkConditions(numberString: String) -> Result {
         let splitString = createSplitString(numberString: numberString)
-        let result = String(convert(splitString: splitString))
         let typeString = splitString.map { $0.numberType }
         
         if numberString.isEmpty {
-            return("fl;sfsd")
+            return Result(result: "Для начала введите число😊", type: .error)
         }
         
         if typeString.count > 1 && typeString.contains(where: { $0 == NumberStringType.zero }) {
-            return "ошибочка 0"
+            return Result(result: "Ноль может быть только один🫣", type: .error)
         }
 
         if typeString.contains(where: { $0 == NumberStringType.error }) {
-            return "лишнее слово/цифра"
+            return Result(result: "Лишнее слово/цифра😢", type: .error)
         }
 
         if typeString.count == 1 && typeString[0] != .hundred && typeString[0] != .and {
-            return  result
+            return Result(result: String(convert(splitString: splitString)), type: .number)
         }
 
         if typeString[typeString.count - 1] == .and {
-            return "and последний надо единицу"
+            return Result(result: "Лишнее слово 'and'🥱", type: .error)
         }
         
         for i in 0...typeString.count - 2 {
             switch typeString[i] {
                 case .units:
                     if typeString[i + 1] != .hundred {
-                        return "после единиц могут следовать только сотни"
+                        return Result(result: "Нарушен порядок образования единиц🤧", type: .error)
                     }
                 case .tens:
-                    return "после 11, 12 ничего не следует"
+                    return Result(result: "После десяток ничего не следует писать🫤", type: .error)
                 case .roundTens:
                     if typeString[i + 1] != .units {
-                        return "после круглых десятков идут только единицы"
+                        return Result(result: "После круглых десятков идут только единицы🤥", type: .error)
                     }
                 case .hundred:
                     if typeString[i + 1] == .units {
-                        return "между единицами надо добавить and"
+                        return Result(result: "Между сотней и единицей надо добавить 'and'🤒", type: .error)
                     } else if typeString[i + 1] == .hundred {
-                        return "после сотен можно писать десятки и единицы"
+                        return Result(result: "Нарушен порядок образования сотен👹", type: .error)
                     }
                 case .and:
                     if typeString[i + 1] != .units {
-                        return "лишнее слово and"
+                        return Result(result: "Лишнее слово 'and'🥱", type: .error)
                     }
                 default:
-                    return "error"
+                    return Result(result: "error", type: .error)
             }
         }
-        return result
+        return Result(result: String(convert(splitString: splitString)), type: .number)
     }
 }
