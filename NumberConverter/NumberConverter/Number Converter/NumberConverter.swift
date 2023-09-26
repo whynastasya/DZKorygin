@@ -47,7 +47,7 @@ final class NumberConverter {
         }
 
         if typeString.count == 1 && typeString[0] != .hundred && typeString[0] != .and {
-            return Result(result: String(convert(splitString: splitString)), type: .number)
+            return Result(result: String(convert(splitString: splitString)), type: .result)
         }
 
         if typeString[typeString.count - 1] == .and {
@@ -80,6 +80,6 @@ final class NumberConverter {
                     return Result(result: "error", type: .error)
             }
         }
-        return Result(result: String(convert(splitString: splitString)), type: .number)
+        return Result(result: String(convert(splitString: splitString)), type: .result)
     }
 }

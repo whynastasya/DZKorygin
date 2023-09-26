@@ -12,10 +12,14 @@
 		EED6CAB02ABBB41000C1B421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED6CAAF2ABBB41000C1B421 /* Assets.xcassets */; };
 		EED6CAB42ABBB41000C1B421 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED6CAB32ABBB41000C1B421 /* Preview Assets.xcassets */; };
 		EED6CABB2ABBB49500C1B421 /* NumberStringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */; };
-		EED6CABD2ABBB4B900C1B421 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABC2ABBB4B900C1B421 /* Extensions .swift */; };
+		EED6CABD2ABBB4B900C1B421 /* Extensions NumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABC2ABBB4B900C1B421 /* Extensions NumberConverter.swift */; };
 		EED6CABF2ABBB4DE00C1B421 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */; };
 		EEF452912ABF12A700F76BE1 /* NumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF452902ABF12A700F76BE1 /* NumberConverter.swift */; };
 		EEF452942AC09FF400F76BE1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF452932AC09FF400F76BE1 /* Result.swift */; };
+		EEF4529C2AC1F07300F76BE1 /* NumberConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4529B2AC1F07300F76BE1 /* NumberConverterView.swift */; };
+		EEF4529E2AC1F1C900F76BE1 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4529D2AC1F1C900F76BE1 /* Sidebar.swift */; };
+		EEF452A02AC1F34C00F76BE1 /* WordMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4529F2AC1F34C00F76BE1 /* WordMixerView.swift */; };
+		EEF452A32AC313AA00F76BE1 /* Extension WordMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF452A22AC313AA00F76BE1 /* Extension WordMixer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +30,14 @@
 		EED6CAB12ABBB41000C1B421 /* NumberConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NumberConverter.entitlements; sourceTree = "<group>"; };
 		EED6CAB32ABBB41000C1B421 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberStringType.swift; sourceTree = "<group>"; };
-		EED6CABC2ABBB4B900C1B421 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
+		EED6CABC2ABBB4B900C1B421 /* Extensions NumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions NumberConverter.swift"; sourceTree = "<group>"; };
 		EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		EEF452902ABF12A700F76BE1 /* NumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverter.swift; sourceTree = "<group>"; };
 		EEF452932AC09FF400F76BE1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EEF4529B2AC1F07300F76BE1 /* NumberConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverterView.swift; sourceTree = "<group>"; };
+		EEF4529D2AC1F1C900F76BE1 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		EEF4529F2AC1F34C00F76BE1 /* WordMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMixerView.swift; sourceTree = "<group>"; };
+		EEF452A22AC313AA00F76BE1 /* Extension WordMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension WordMixer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,8 @@
 			children = (
 				EED6CAAB2ABBB40E00C1B421 /* NumberConverterApp.swift */,
 				EED6CAAD2ABBB40E00C1B421 /* ContentView.swift */,
+				EEF4529D2AC1F1C900F76BE1 /* Sidebar.swift */,
+				EEF452A12AC1F62D00F76BE1 /* WordMixer */,
 				EEF452922ABF130E00F76BE1 /* Number Converter */,
 				EED6CAAF2ABBB41000C1B421 /* Assets.xcassets */,
 				EED6CAB12ABBB41000C1B421 /* NumberConverter.entitlements */,
@@ -83,13 +93,23 @@
 		EEF452922ABF130E00F76BE1 /* Number Converter */ = {
 			isa = PBXGroup;
 			children = (
+				EEF4529B2AC1F07300F76BE1 /* NumberConverterView.swift */,
 				EED6CABE2ABBB4DE00C1B421 /* Numbers.swift */,
 				EED6CABA2ABBB49500C1B421 /* NumberStringType.swift */,
 				EEF452902ABF12A700F76BE1 /* NumberConverter.swift */,
-				EED6CABC2ABBB4B900C1B421 /* Extensions .swift */,
+				EED6CABC2ABBB4B900C1B421 /* Extensions NumberConverter.swift */,
 				EEF452932AC09FF400F76BE1 /* Result.swift */,
 			);
 			path = "Number Converter";
+			sourceTree = "<group>";
+		};
+		EEF452A12AC1F62D00F76BE1 /* WordMixer */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4529F2AC1F34C00F76BE1 /* WordMixerView.swift */,
+				EEF452A22AC313AA00F76BE1 /* Extension WordMixer.swift */,
+			);
+			path = WordMixer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,12 +182,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED6CABD2ABBB4B900C1B421 /* Extensions .swift in Sources */,
+				EEF4529C2AC1F07300F76BE1 /* NumberConverterView.swift in Sources */,
+				EED6CABD2ABBB4B900C1B421 /* Extensions NumberConverter.swift in Sources */,
 				EED6CAAE2ABBB40E00C1B421 /* ContentView.swift in Sources */,
+				EEF452A02AC1F34C00F76BE1 /* WordMixerView.swift in Sources */,
 				EED6CABF2ABBB4DE00C1B421 /* Numbers.swift in Sources */,
 				EED6CAAC2ABBB40E00C1B421 /* NumberConverterApp.swift in Sources */,
 				EEF452942AC09FF400F76BE1 /* Result.swift in Sources */,
 				EED6CABB2ABBB49500C1B421 /* NumberStringType.swift in Sources */,
+				EEF4529E2AC1F1C900F76BE1 /* Sidebar.swift in Sources */,
+				EEF452A32AC313AA00F76BE1 /* Extension WordMixer.swift in Sources */,
 				EEF452912ABF12A700F76BE1 /* NumberConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

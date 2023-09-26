@@ -15,14 +15,14 @@ struct Result {
 
 enum ResultType {
     case error
-    case number
+    case result
     case `default`
     
     var color: Color {
         switch self {
         case .error:
             return .red
-        case .number:
+        case .result:
             return .green
         case .`default`:
             return .purple
