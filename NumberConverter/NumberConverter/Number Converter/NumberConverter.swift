@@ -38,12 +38,16 @@ final class NumberConverter {
             return Result(result: "Для начала введите число😊", type: .error)
         }
         
+        if typeString.contains(where: { $0 == NumberStringType.error }) {
+            for i in 0..<typeString.count {
+                if typeString[i] == .error {
+                    return Result(result: "Лишнее слово/цифра - \(splitString[i])😢", type: .error)
+                }
+            }
+        }
+        
         if typeString.count > 1 && typeString.contains(where: { $0 == NumberStringType.zero }) {
             return Result(result: "Ноль может быть только один🫣", type: .error)
-        }
-
-        if typeString.contains(where: { $0 == NumberStringType.error }) {
-            return Result(result: "Лишнее слово/цифра😢", type: .error)
         }
 
         if typeString.count == 1 && typeString[0] != .hundred && typeString[0] != .and {
