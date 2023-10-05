@@ -36,7 +36,7 @@ struct NumberConverterView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
-            .tint(.purple.opacity(0.1))
+            .tint(.purple)
         }
         .padding()
     }

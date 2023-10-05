@@ -58,14 +58,12 @@ final class NumberConverter {
             return Result(result: "Лишнее слово 'and'🥱", type: .error)
         }
         
-        if typeString[0] == .units && typeString[1] == .hundred {
-            return Result(result: String(convert(splitString: splitString)), type: .result)
-        }
-        
         for i in 0...typeString.count - 2 {
             switch typeString[i] {
                 case .units:
-                    return Result(result: "Нарушен порядок образования единиц🤧", type: .error)
+                    if typeString[i + 1] == .hundred && i != 0 {
+                        return Result(result: "Нарушен порядок образования единиц🤧", type: .error)
+                    }
                 case .tens:
                     return Result(result: "После десяток ничего не следует писать🫤", type: .error)
                 case .roundTens:
