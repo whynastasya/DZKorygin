@@ -27,7 +27,7 @@ struct NumberConverterView: View {
             
             Button {
                 withAnimation {
-                    result = NumberConverter.checkConditions(numberString: numberString)
+                    result = NumberConverter.checkConditions(numberString: numberString + " ")
                 }
             } label: {
                 HStack {
