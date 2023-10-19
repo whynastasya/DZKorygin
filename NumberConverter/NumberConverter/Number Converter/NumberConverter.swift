@@ -41,13 +41,13 @@ final class NumberConverter {
         if typeString.contains(where: { $0 == NumberStringType.error }) {
             for i in 0..<typeString.count {
                 if typeString[i] == .error {
-                    return Result(result: "Лишнее слово/цифра - \(splitString[i])😢", type: .error)
+                    return Result(result: "Неправильное написание числа: - \(splitString[i])😢", type: .error)
                 }
             }
         }
         
         if typeString.count > 1 && typeString.contains(where: { $0 == NumberStringType.zero }) {
-            return Result(result: "Ноль может быть только один🫣", type: .error)
+            return Result(result: "Лишний ноль🫣", type: .error)
         }
 
         if typeString.count == 1 && typeString[0] != .hundred && typeString[0] != .and {
@@ -62,19 +62,19 @@ final class NumberConverter {
             switch typeString[i] {
                 case .units:
                     if typeString[i + 1] == .hundred && i != 0 {
-                        return Result(result: "Нарушен порядок образования единиц🤧", type: .error)
+                        return Result(result: "Нарушен порядок образования единиц (1, 2...9)🤧", type: .error)
                     }
                 case .tens:
-                    return Result(result: "После десяток ничего не следует писать🫤", type: .error)
+                    return Result(result: "Нарушен порядок образования чисел формата 11, 12...19🫤", type: .error)
                 case .roundTens:
                     if typeString[i + 1] != .units  {
-                        return Result(result: "После круглых десятков идут только единицы🤥", type: .error)
+                        return Result(result: "Нарушен порядок образования десяток (10, 20...90)🤥", type: .error)
                     }
                 case .hundred:
                     if typeString[i + 1] == .units {
                         return Result(result: "Между сотней и единицей надо добавить 'and'🤒", type: .error)
                     } else if typeString[i + 1] == .hundred {
-                        return Result(result: "Нарушен порядок образования сотен👹", type: .error)
+                        return Result(result: "Нарушен порядок образования сотен (100, 200...900)👹", type: .error)
                     }
                 case .and:
                     if typeString[i + 1] != .units {
